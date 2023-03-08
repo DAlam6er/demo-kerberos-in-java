@@ -10,16 +10,16 @@ import javax.security.auth.login.LoginContext;
  */
 public class AcceptorAuthenticationMain {
 
-    public static void main(String[] args) throws Exception {
-        System.setProperty("sun.security.krb5.debug", "true");
-        System.setProperty("java.security.auth.login.config", "jaas.conf");
-        System.setProperty("java.security.krb5.conf", "krb5.conf");
+  public static void main(String[] args) throws Exception {
+    System.setProperty("sun.security.krb5.debug", "true");
+    System.setProperty("java.security.auth.login.config", "jaas.conf");
+    System.setProperty("java.security.krb5.conf", "krb5.conf");
 
-        LoginContext lc = new LoginContext("KerberosAcceptorWithKeytab");
-        lc.login();
-        Subject subj = lc.getSubject();
+    LoginContext lc = new LoginContext("KerberosAcceptorWithKeytab");
+    lc.login();
+    Subject subj = lc.getSubject();
 
-        System.out.println("Principals: " + subj.getPrincipals());
-        System.out.println("PrivateCredentials: " + subj.getPrivateCredentials());
-    }
+    System.out.println("Principals: " + subj.getPrincipals());
+    System.out.println("PrivateCredentials: " + subj.getPrivateCredentials());
+  }
 }
