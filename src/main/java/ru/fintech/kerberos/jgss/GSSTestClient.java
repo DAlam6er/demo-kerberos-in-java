@@ -1,6 +1,6 @@
-package cz.cacek.kerberos.jgss;
+package ru.fintech.kerberos.jgss;
 
-import cz.cacek.kerberos.jaas.NamePasswordCbHandler;
+import ru.fintech.kerberos.jaas.NamePasswordCbHandler;
 import org.ietf.jgss.GSSContext;
 import org.ietf.jgss.GSSException;
 import org.ietf.jgss.GSSManager;
@@ -14,7 +14,7 @@ import java.io.DataOutputStream;
 import java.net.Socket;
 import java.security.PrivilegedExceptionAction;
 
-import static cz.cacek.kerberos.Krb5Constants.KRB5_OID;
+import static ru.fintech.kerberos.Krb5Constants.KRB5_OID;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 /**

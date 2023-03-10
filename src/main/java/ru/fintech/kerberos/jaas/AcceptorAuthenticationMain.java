@@ -1,4 +1,4 @@
-package cz.cacek.kerberos.jaas;
+package ru.fintech.kerberos.jaas;
 
 import javax.security.auth.Subject;
 import javax.security.auth.login.LoginContext;

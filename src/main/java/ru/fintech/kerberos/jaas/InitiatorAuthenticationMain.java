@@ -1,4 +1,4 @@
-package cz.cacek.kerberos.jaas;
+package ru.fintech.kerberos.jaas;
 
 import org.apache.kerby.asn1.Asn1;
 
@@ -20,10 +20,11 @@ public class InitiatorAuthenticationMain {
     System.setProperty("java.security.auth.login.config", "jaas.conf");
     System.setProperty("java.security.krb5.conf", "krb5.conf");
 
+    // KerberosWithPrompt is in jaas.conf (Login Configuration File)
     LoginContext lc = new LoginContext("KerberosWithPrompt",
         new NamePasswordCbHandler("jduke@TEST.REALM", "theduke".toCharArray()));
     lc.login();
-    Subject subj = lc.getSubject();
+    Subject subj = lc.getSubject();  // get TGT
 
     Set<Object> privateCredentials = subj.getPrivateCredentials();
     KerberosTicket kt = (KerberosTicket) privateCredentials.iterator().next();

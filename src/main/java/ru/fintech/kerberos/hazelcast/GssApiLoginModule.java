@@ -1,4 +1,4 @@
-package cz.cacek.kerberos.hazelcast;
+package ru.fintech.kerberos.hazelcast;
 
 import com.hazelcast.security.ClusterIdentityPrincipal;
 import com.hazelcast.security.ClusterRolePrincipal;

@@ -1,4 +1,4 @@
-package cz.cacek.kerberos.jgss;
+package ru.fintech.kerberos.jgss;
 
 import org.ietf.jgss.GSSContext;
 import org.ietf.jgss.GSSCredential;

@@ -17,7 +17,7 @@ Package: `cz.cacek.kerberos.kdc`
 [Apache Kerby](https://directory.apache.org/kerby/) allows to simply
 configure and run embedded KDC.
 
-See [KerbyServerMain.java](src/main/java/cz/cacek/kerberos/kdc/KerbyServerMain.java).
+See [KerbyServerMain.java](src/main/java/ru/fintech/kerberos/kdc/KerbyServerMain.java).
 When it's launched it regenerates [krb5.conf](krb5.conf) file and also
 creates the `service.keytab` if necessary.
 
@@ -26,7 +26,7 @@ creates the `service.keytab` if necessary.
 Package: `cz.cacek.kerberos.jaas`
 
 Simple
-applications [InitiatorAuthenticationMain](src/main/java/cz/cacek/kerberos/jaas/InitiatorAuthenticationMain.java) [AcceptorAuthenticationMain](src/main/java/cz/cacek/kerberos/jaas/AcceptorAuthenticationMain.java)
+applications [InitiatorAuthenticationMain](src/main/java/ru/fintech/kerberos/jaas/InitiatorAuthenticationMain.java) [AcceptorAuthenticationMain](src/main/java/ru/fintech/kerberos/jaas/AcceptorAuthenticationMain.java)
 shows how to work with Oracle/OpenJDK `Krb5LoginModule`
 implementation (`com.sun.security.auth.module.Krb5LoginModule`).
 
@@ -51,17 +51,17 @@ support Kerberos authentication (in 4.0-BETA-2 version), but it does
 support JAAS authentication.
 
 The demo introduces a simple login
-module [GssApiLoginModule](src/main/java/cz/cacek/kerberos/hazelcast/GssApiLoginModule.java)
+module [GssApiLoginModule](src/main/java/ru/fintech/kerberos/hazelcast/GssApiLoginModule.java)
 which uses the GSS-API to accept Kerberos tokens. When the authentication
 passes, it fills JAAS Subject with `Principal` types required by Hazelcast.
 
 The new login module is configured on Hazelcast servers (members) to
 authenticate client connections.
-See [HazelcastServerMain](src/main/java/cz/cacek/kerberos/hazelcast/HazelcastServerMain.java).
+See [HazelcastServerMain](src/main/java/ru/fintech/kerberos/hazelcast/HazelcastServerMain.java).
 
 Clients need to configure valid GSS-API/Kerberos token to authenticate the
 connection into the Hazelcast cluster.
-See [HazelcastClientMain](src/main/java/cz/cacek/kerberos/hazelcast/HazelcastClientMain.java).
+See [HazelcastClientMain](src/main/java/ru/fintech/kerberos/hazelcast/HazelcastClientMain.java).
 
 The JAAS login configuration for this demo is also defined in
 the [jaas.conf](jaas.conf) file.
@@ -74,7 +74,7 @@ Package: `cz.cacek.kerberos.jgss`
 
 Client/server demo application, which is able to provide one-way or mutual
 GSS-API/Kerberos authentication and message encryption.
-See [GSSTestServer](src/main/java/cz/cacek/kerberos/jgss/GSSTestServer.java)
-and [GSSTestServer](src/main/java/cz/cacek/kerberos/jgss/GSSTestClient.java).
+See [GSSTestServer](src/main/java/ru/fintech/kerberos/jgss/GSSTestServer.java)
+and [GSSTestServer](src/main/java/ru/fintech/kerberos/jgss/GSSTestClient.java).
 
 The client needs the KDC running.

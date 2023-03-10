@@ -1,4 +1,4 @@
-package cz.cacek.kerberos.hazelcast;
+package ru.fintech.kerberos.hazelcast;
 
 import com.hazelcast.client.HazelcastClient;
 import com.hazelcast.client.config.ClientConfig;
@@ -12,7 +12,7 @@ import org.ietf.jgss.GSSName;
 import java.time.LocalTime;
 import java.util.Map;
 
-import static cz.cacek.kerberos.Krb5Constants.KRB5_OID;
+import static ru.fintech.kerberos.Krb5Constants.KRB5_OID;
 
 /**
  * Sample GSS-API/Kerberos client authentication in Hazelcast Enterprise.

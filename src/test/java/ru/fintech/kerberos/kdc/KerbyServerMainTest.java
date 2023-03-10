@@ -1,7 +1,7 @@
-package cz.cacek.test;
+package ru.fintech.kerberos.kdc;
 
-import cz.cacek.kerberos.jaas.NamePasswordCbHandler;
-import cz.cacek.kerberos.kdc.KerbyServerMain;
+import ru.fintech.kerberos.jaas.NamePasswordCbHandler;
+import ru.fintech.kerberos.kdc.KerbyServerMain;
 import org.apache.kerby.kerberos.kerb.KrbException;
 import org.junit.Test;
 

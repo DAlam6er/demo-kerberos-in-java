@@ -1,4 +1,4 @@
-package cz.cacek.kerberos.hazelcast;
+package ru.fintech.kerberos.hazelcast;
 
 import com.hazelcast.config.Config;
 import com.hazelcast.config.JoinConfig;

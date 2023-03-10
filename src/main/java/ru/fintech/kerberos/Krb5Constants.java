@@ -1,4 +1,4 @@
-package cz.cacek.kerberos;
+package ru.fintech.kerberos;
 
 import org.ietf.jgss.GSSException;
 import org.ietf.jgss.Oid;
